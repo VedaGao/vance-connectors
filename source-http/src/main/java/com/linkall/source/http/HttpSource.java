@@ -2,7 +2,7 @@ package com.linkall.source.http;
 
 import com.linkall.core.Adapter;
 import com.linkall.core.Adapter2;
-import com.linkall.core.Connector;
+import com.linkall.core.Source;
 import com.linkall.core.http.HttpClient;
 import com.linkall.core.http.HttpServer;
 import io.cloudevents.CloudEvent;
@@ -19,7 +19,7 @@ import java.util.UUID;
 import java.util.concurrent.atomic.AtomicInteger;
 
 
-public class HttpSource implements Connector {
+public class HttpSource implements Source {
     private static final Logger LOGGER = LoggerFactory.getLogger(HttpSource.class);
     private static final AtomicInteger eventNum = new AtomicInteger(0);
 
