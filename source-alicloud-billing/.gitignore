@@ -1,8 +1,8 @@
 # macOS
 .DS_Store
-
 # build dir
 bin
-
 # dep
 cdk-go
+# config
+config.json
