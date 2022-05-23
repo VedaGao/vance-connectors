@@ -10,7 +10,7 @@ require (
 	github.com/pkg/errors v0.9.1
 )
 
-replace github.com/linkall-labs/cdk-go v0.0.0 => ./cdk-go
+replace github.com/linkall-labs/cdk-go v0.0.0 => ../cdk-go
 
 require (
 	github.com/go-logr/zapr v1.2.0 // indirect

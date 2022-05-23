@@ -75,6 +75,7 @@ func (s *AwsBillingSource) Start() error {
 	go func() {
 		defer wg.Done()
 		for {
+			s.getCost()
 			now := time.Now()
 			next := now.Add(time.Hour * 24)
 			next = time.Date(next.Year(), next.Month(), next.Day(), s.config.PullHour, 0, 0, 0, next.Location())

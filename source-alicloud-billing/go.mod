@@ -13,7 +13,7 @@ require (
 	github.com/linkall-labs/cdk-go v0.0.0
 )
 
-replace github.com/linkall-labs/cdk-go v0.0.0 => ./cdk-go
+replace github.com/linkall-labs/cdk-go v0.0.0 => ../cdk-go
 
 require (
 	github.com/alibabacloud-go/alibabacloud-gateway-spi v0.0.4 // indirect

@@ -12,7 +12,7 @@ require (
 	github.com/linkall-labs/cdk-go v0.0.0
 )
 
-replace github.com/linkall-labs/cdk-go v0.0.0 => ./cdk-go
+replace github.com/linkall-labs/cdk-go v0.0.0 => ../cdk-go
 
 require (
 	github.com/aws/aws-sdk-go-v2/internal/configsources v1.1.11 // indirect

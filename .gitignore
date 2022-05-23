@@ -7,3 +7,5 @@
 
 # java
 target/
+# dep
+cdk-go
