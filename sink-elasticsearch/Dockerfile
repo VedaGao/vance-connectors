@@ -1,12 +1,9 @@
 FROM golang:1.17 as builder
 WORKDIR /workspace
 
-COPY go.mod go.mod
-COPY go.sum go.sum
-COPY cmd cmd
-COPY sink_elasticsearch sink_elasticsearch
+COPY vance-connectors/sink-elasticsearch  sink-elasticsearch
 COPY cdk-go cdk-go
-
+WORKDIR /workspace/sink-elasticsearch
 ARG TARGETOS
 ARG TARGETARCH
 RUN GOOS=$TARGETOS GOARCH=$TARGETARCH go build -o bin/app cmd/main.go

@@ -1,12 +1,9 @@
 FROM golang:1.17 as builder
 WORKDIR /workspace
 
-COPY go.mod go.mod
-COPY go.sum go.sum
-COPY cmd cmd
-COPY aws_billing aws_billing
+COPY vance-connectors/source-aws-billing  source-aws-billing
 COPY cdk-go cdk-go
-
+WORKDIR /workspace/source-aws-billing
 ARG TARGETOS
 ARG TARGETARCH
 RUN GOOS=$TARGETOS GOARCH=$TARGETARCH go build -o bin/app cmd/main.go

@@ -1,12 +1,9 @@
 FROM golang:1.17 as builder
 WORKDIR /workspace
 
-COPY go.mod go.mod
-COPY go.sum go.sum
-COPY cmd cmd
-COPY alicloud_billing alicloud_billing
+COPY vance-connectors/source-alicloud-billing  source-alicloud-billing
 COPY cdk-go cdk-go
-
+WORKDIR /workspace/source-alicloud-billing
 ARG TARGETOS
 ARG TARGETARCH
 RUN GOOS=$TARGETOS GOARCH=$TARGETARCH go build -o bin/app cmd/main.go
